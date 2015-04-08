@@ -1,12 +1,11 @@
 require 'jira'
 require 'yaml'
-require 'pry'
 
 namespace :jira do
   molflow_config_file = Pathname.new(ENV['HOME']).join('.molflow')
 
   if File.exist?(molflow_config_file)
-    YAML.load_file(molflow_config_file)
+    molflow_config = YAML.load_file(molflow_config_file)
 
     options = {
             :username => molflow_config['username'],
