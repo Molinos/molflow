@@ -5,7 +5,7 @@
 
 Установите гем из репозитория
 
-    $ rvmsudo gem install molflow
+    $ gem install molflow
 
 Затем нужно сконфигурировать
 
