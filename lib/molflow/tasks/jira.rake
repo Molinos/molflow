@@ -3,19 +3,22 @@ require 'yaml'
 require 'pry'
 
 namespace :jira do
-  molflow_config = YAML.load_file(Pathname.new(ENV['HOME']).join('.molflow'))
+  molflow_config_file = Pathname.new(ENV['HOME']).join('.molflow')
 
-  options = {
-          :username => molflow_config['username'],
-          :password => molflow_config['password'],
-          :site     => molflow_config['site'],
-          :auth_type => :basic,
-          :context_path => '',
-          :use_ssl => true
-        }
+  if File.exist?(molflow_config_file)
+    YAML.load_file(molflow_config_file)
 
-  @client = JIRA::Client.new(options)
+    options = {
+            :username => molflow_config['username'],
+            :password => molflow_config['password'],
+            :site     => molflow_config['site'],
+            :auth_type => :basic,
+            :context_path => '',
+            :use_ssl => true
+          }
 
+    @client = JIRA::Client.new(options)
+  end
 
   task :ps do
     # Show all projects
