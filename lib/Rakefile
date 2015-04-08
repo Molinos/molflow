@@ -1,0 +1,2 @@
+require 'molflow/install'
+require 'molflow/jira'
