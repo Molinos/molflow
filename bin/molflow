@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-require "bundler/setup"
-require "molflow"
+require 'molflow/cli'
 
-Molflow::Application.new.run
+Molflow::CLI.start

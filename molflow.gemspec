@@ -14,8 +14,11 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files`.split($/)
 
   s.required_ruby_version     = '>= 1.9.3'
-  s.add_runtime_dependency 'rake', '~> 10.0', '>= 10.0.0'
+  s.add_dependency "thor", "~> 0.14"
   s.add_dependency 'jira-ruby','~> 0.1'
+
+  s.add_development_dependency "bundler", "~> 1.7"
+  s.add_development_dependency "rake", "~> 10.4"
 
   s.executables   = %w(molflow)
   s.require_paths = ["lib"]
