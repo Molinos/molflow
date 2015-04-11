@@ -7,5 +7,10 @@ gem 'molflow', path: '../molflow'
 gem 'pry'
 
 group :test do
-  gem "rspec", "~> 3.1"
+  gem 'generator_spec'
+  gem 'guard-rspec', require: false
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
+  gem 'pry'
+  gem 'genspec', require: false
 end

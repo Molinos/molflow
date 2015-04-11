@@ -1,3 +1,19 @@
-site:     '<%= @site %>'
-username: '<%= @username %>'
-password: '<%= @password %>'
+# atlassian options for client of jira-ruby gem: https://github.com/sumoheavy/jira-ruby/blob/master/lib/jira/client.rb
+atlassian:
+  site:     '<%= @site %>'
+  username: '<%= @username %>'
+  password: '<%= @password %>'
+  auth_type: :basic
+  context_path: ''
+  #signature_method:   'RSA-SHA1',
+  #request_token_path: '/plugins/servlet/oauth/request-token'
+  #authorize_path:     '/plugins/servlet/oauth/authorize'
+  #access_token_path:  '/plugins/servlet/oauth/access-token'
+  #private_key_file:   'rsakey.pem'
+  #rest_base_path:     '/rest/api/2'
+  #consumer_key:       nil
+  #consumer_secret:    nil
+  #ssl_verify_mode:    OpenSSL::SSL::VERIFY_PEER
+  #use_ssl:            true,
+  #proxy_address:      nil
+  #proxy_port:         nil

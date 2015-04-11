@@ -8,9 +8,11 @@ module Molflow
     desc 'install', 'Install Figaro'
 
     method_option 'path',
-                  aliases: ['-p'],
+                  aliases: ['-p'], type: :string,
                   default: "#{ENV['HOME']}/.molflow",
-                  desc: 'Specify a configuration file path'
+                  desc: 'Specify a configuration file path. You then need to add
+                         "export MOLFLOW_BASE_CONFIG= :you_path"
+                         to the ~/.bashrc or ~/.zshrc file'
 
     def install
       require 'molflow/cli/install'
