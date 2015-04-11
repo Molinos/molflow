@@ -9,7 +9,12 @@
 
 Затем нужно сконфигурировать
 
-    $ molflow install
+    $ molflow install [-p 'PATH']
+
+**Важно!**: Если выбран не стандартный путь `~/.molflow`, тогда нужно добавить в `~/.bashrc` или `~/.zshrc`
+следующую строчку:
+
+    export MOLFLOW_BASE_CONFIG = /custom/path/to/config/.file
 
 Адрес для atlassian molinos: https://molinos.atlassian.net
 
@@ -47,5 +52,7 @@
                              # --commit -c [:message]     - 'git add . ; git commit -m "REN-215: Task name"' #TODO: description
                              # --merge -m :branch         - 'git checkout :branch; git rebase REN-215'
                              # --log -l :time             - logwork issue
+
+    mf jira i:delegate
 
     mf init_project # configuration file in directory
