@@ -1,5 +1,5 @@
 module Molflow
-  class CLI < Thor
+  module Commands
     class Task
       attr_reader :options
 
