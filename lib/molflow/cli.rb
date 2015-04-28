@@ -13,7 +13,7 @@ module Molflow
     desc 'install', 'molflow setup'
     def install
       require 'molflow/commands/install'
-      Install.start
+      Commands::Install.start
     end
   end
 end
