@@ -1,38 +1,19 @@
 require 'thor'
 require 'pry'
+require 'molflow/command_options'
+require 'molflow/commands/jira'
 
 module Molflow
   class CLI < Thor
+    extend CommandOptions
+    register(Commands::Jira, 'jira', '<command>', 'Description.')
+
     # molflow install
-
-    desc 'install', 'Install Figaro'
-
-    class_option  'path',
-                  aliases: ['-p'], type: :string,
-                  default: "#{ENV['HOME']}/.molflow",
-                  desc: 'Specify a configuration file path.'
-
+    method_option  'path', install_options('path')
+    desc 'install', 'molflow setup'
     def install
-      require 'molflow/cli/install'
+      require 'molflow/commands/install'
       Install.start
-    end
-
-    # molflow jira:ps
-
-    desc 'jira:ps', 'The list of projects in jira'
-
-    define_method 'jira:ps' do
-      require 'molflow/cli/jira_projects'
-      JiraProjects.run(options)
-    end
-
-    # molflow jira:is
-
-    desc 'jira:is', 'The list of projects in jira'
-
-    define_method 'jira:is' do
-      require 'molflow/cli/jira_issues'
-      JiraIssues.run(options)
     end
   end
 end

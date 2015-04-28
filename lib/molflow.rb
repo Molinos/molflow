@@ -1,5 +1,8 @@
 require 'rake'
 
 module Molflow
-  # Your code goes here...
+
+  def self.root
+    File.dirname __dir__
+  end
 end

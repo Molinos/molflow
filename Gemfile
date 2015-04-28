@@ -5,6 +5,7 @@ gemspec
 
 gem 'molflow', path: '../molflow'
 gem 'pry'
+gem 'rest-client'
 
 group :test do
   gem 'generator_spec'
@@ -13,4 +14,5 @@ group :test do
   gem 'simplecov-console', require: false
   gem 'pry'
   gem 'genspec', require: false
+  gem 'mocha'
 end

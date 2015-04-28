@@ -1,16 +1,14 @@
 require 'thor/group'
 
 module Molflow
-  class CLI < Thor
+  module Commands
     # Class is used to customize the environment of the OS that will work with this gem.
     # Default settings for all heme is written to the file ~/.molflow, or as --path parameter
     class Install < Thor::Group
       include Thor::Actions
+      extend CommandOptions
 
-      class_option  'path',
-                    aliases: ['-p'], type: :string,
-                    default: "#{ENV['HOME']}/.molflow",
-                    desc: 'Specify a configuration file path.'
+      class_option  'path', install_options('path')
 
       def self.source_root
         File.expand_path('../install', __FILE__)

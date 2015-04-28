@@ -1,11 +1,13 @@
 require 'spec_helper'
-require 'molflow/cli/install'
+require 'molflow/commands/install'
 
-describe Molflow::CLI::Install do
-  subject(:install) { Molflow::CLI::Install }
+describe Molflow::Commands::Install do
+  subject(:install) { Molflow::Commands::Install }
 
   it '#install: generate base configuration file' do
-    path = File.expand_path('../../tmp/.molflow', __FILE__)
+    install.any_instance.stubs(:ask).returns(true)
+
+    path = "#{Molflow.root}/tmp/.molflow"
     install.start(['-p', path].compact)
 
     expect(File.exist?(path)).to be true
