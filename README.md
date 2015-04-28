@@ -21,28 +21,19 @@
 
 ## Использование
 
-    $ molflow jira:ps
-    $ molflow jira:is
+  mf help [COMMAND]   # Describe available commands or one specific command
+  mf install          # molflow setup
+  mf jira help [COMMAND]    # Describe subcommands or one specific subcommand
+  mf jira jira i ISSUE_KEY  # show issue
+  mf jira jira is           # list issues
+  mf jira jira ps           # list projects
 
 ## Планы
 
-    mf jira ps # list all projects
-               # --my                       - only you projects
-
-    mf jira is # list all issues
-               # --user -u [:username]      – user issues; default current
-               # --project -p [:projectkey] - user issues; default all
-               # --todo -u                  - only "to do" status issues
-               # --sprint -s [:sprint]      – issues by sprint, default: current
-               # --fields -f :fields        - show fields, #TODO: default
-               # --jql                      - jql request
 
     mf jira fs # list all filters
                # ? надо с фильтрами разобраться, к каким есть доступ
 
-    mf jira i REN-215 # show issue info
-                      # --fields -f :fields  - show fields, #TODO: default
-                      # --comments -c        - show_comments
 
     mf jira i:start REN-215 # change status "to do" > "in progress"
                             # --branch -b : 'git checkout master; git checkout -b REN-215'
