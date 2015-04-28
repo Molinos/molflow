@@ -24,9 +24,9 @@
     mf help [COMMAND]   # Describe available commands or one specific command
     mf install          # molflow setup
     mf jira help [COMMAND]    # Describe subcommands or one specific subcommand
-    mf jira jira i ISSUE_KEY  # show issue
-    mf jira jira is           # list issues
-    mf jira jira ps           # list projects
+    mf jira i ISSUE_KEY  # show issue
+    mf jira is           # list issues
+    mf jira ps           # list projects
 
 ## Планы
 
