@@ -6,7 +6,7 @@ require 'molflow/commands/jira'
 module Molflow
   class CLI < Thor
     extend CommandOptions
-    register(Commands::Jira, 'jira', '<command>', 'Description.')
+    register(Commands::Jira, 'jira', 'jira <resource>', 'show info jira resource')
 
     # molflow install
     method_option  'path', install_options('path')
