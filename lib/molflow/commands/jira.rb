@@ -28,7 +28,7 @@ module Molflow
       end
 
       method_option  'issue_key', jira_options('issue_key')
-      desc 'jira i ', 'show issue'
+      desc 'jira i ISSUE_KEY', 'show issue'
       def i(issue_key)
         Issue.run(options.merge issue_key: issue_key)
       end
