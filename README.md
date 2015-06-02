@@ -27,6 +27,9 @@
     mf jira i ISSUE_KEY  # show issue
     mf jira is           # list issues
     mf jira ps           # list projects
+    mf open i ISSUE_KEY  # open issue in browser; Checked before open browser
+    mf open pr PROJECT  # open project in browser; Checked before open browser
+    mf open j JIRA_KEY # open jira site. skip check api request
 
 ## Планы
 
