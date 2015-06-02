@@ -51,5 +51,31 @@ module Molflow
         }
       end
     end
+
+    def open_options(key)
+      case key
+      when 'issue_key'
+        {
+          type: :string,
+          aliases: [''],
+          default: '',
+          desc: 'order issues'
+        }
+      when 'project_key'
+        {
+          type: :string,
+          aliases: [''],
+          default: '',
+          desc: 'order issues'
+        }
+       when 'jira_key'
+        {
+          type: :string,
+          aliases: [''],
+          default: '',
+          desc: 'order issues'
+        }
+      end
+    end
   end
 end

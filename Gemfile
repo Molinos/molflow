@@ -6,6 +6,7 @@ gemspec
 gem 'molflow', path: '../molflow'
 gem 'pry'
 gem 'rest-client'
+gem 'launchy'
 
 group :test do
   gem 'generator_spec'
